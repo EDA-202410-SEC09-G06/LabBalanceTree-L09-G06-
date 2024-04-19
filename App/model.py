@@ -90,7 +90,7 @@ def updateAreaIndex(map, crime):
     entry = om.get(map,area_reportada)
     
     if entry == None:
-        area_entry = newAreaEntry[crime]
+        area_entry = newAreaEntry(crime)
         om.put[map,area_reportada,area_entry]
 
     
