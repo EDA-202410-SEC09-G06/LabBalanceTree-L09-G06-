@@ -98,7 +98,7 @@ def updateAreaIndex(map, crime):
         area_entry = me.getValue(entry)
 
 
-        if area_entry = " " or "" or None:
+        if area_entry == " " or "" or None:
             area_entry = 9999
 
     addAreaIndex(area_entry,crime)
@@ -295,7 +295,7 @@ def getCrimesByRangeArea(analyzer, initialArea, finalArea):
     totalcrimes = 0
 
     for lstarea in lt.iterator(lst):
-        totalcrimes += lt.size(lstarea{"lstcrimes"})
+        totalcrimes += lt.size(lstarea["lstcrimes"])
     return totalcrimes
 
 
