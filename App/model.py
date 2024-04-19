@@ -91,14 +91,14 @@ def updateAreaIndex(map, crime):
     
     if entry == None:
         area_entry = newAreaEntry(crime)
-        om.put[map,area_reportada,area_entry]
+        om.put(map,area_reportada,area_entry)
 
     
     else:
         area_entry = me.getValue(entry)
 
 
-        if area_entry == " " or "" or None:
+        if area_entry == " " or area_entry ==  "" or area_entry == None:
             area_entry = 9999
 
     addAreaIndex(area_entry,crime)
@@ -122,8 +122,8 @@ def newAreaEntry(crime):
     """
     # TODO lab 9, crear una entrada para el indice de areas reportadas
     entry = {"lstcrimes": None, }
-    entry["lstcrimes"] = lt.newlist("SINGLED_LINKED", compareAreas)
-    lt.addlast(entry["lstcrimes"],crime)
+    entry["lstcrimes"] = lt.newList("SINGLE_LINKED", compareAreas)
+    lt.addLast(entry["lstcrimes"],crime)
     return entry
 
 

@@ -78,10 +78,10 @@ while True:
         print("Elementos en el arbol: " + str(controller.indexSize(cont)))
         print("Menor Llave: " + str(controller.minKey(cont)))
         print("Mayor Llave: " + str(controller.maxKey(cont)))
-        print("Altura indice por areas" + str(controller.indexHeightAreas(cont)))
-        print("Elementos indice por areas" + str(controller.indexSizeAreas(cont)))
-        print("maximo indice por areas" + str(controller.maxKeyAreas(cont)))
-        print("minimo indice por areas" + str(controller.minKeyAreas(cont)))
+        print("Altura indice por areas: " + str(controller.indexHeightAreas(cont)))
+        print("Elementos indice por areas: " + str(controller.indexSizeAreas(cont)))
+        print("maxima llave por areas: " + str(controller.maxKeyAreas(cont)))
+        print("minima llave por areas: " + str(controller.minKeyAreas(cont)))
         # TODO lab 9, imprimir las propiedades del indice de areas
         # propiedades: altura, elementos y llaves min y max
 
