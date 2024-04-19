@@ -103,12 +103,12 @@ while True:
 
     elif (int(inputs[0]) == 5):
         # TODO lab 9, implementar el I/O e invocar las funcions de la opcion 5
-        initial_area = input("ingrese el area inicial: ")
-        area_final = input("ingresa el area final: ")
-        num_crimes = controller.getCrimesByRangeArea(cont,initial_area,area_final)
         print("\nBuscando crimenes en un rango de areas: ")
         print("Las areas estan numeradas con enteros (1 - 962)")
         print("Un area desconocida tiene el el numero 9999")
+        initial_area = input("ingrese el area inicial: ")
+        area_final = input("ingresa el area final: ")
+        num_crimes = controller.getCrimesByRangeArea(cont,initial_area,area_final)
         print("El total de crimenes en el rango de areas es " + str(num_crimes))
 
     else:

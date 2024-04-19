@@ -169,7 +169,7 @@ def getCrimesByRangeArea(analyzer, initialArea, finalArea):
     Retorna el total de crimenes en un rango de areas
     """
 
-    return model.getCrimesByRangeArea(analyzer, initialArea, finalArea)
+    return model.getCrimesByRangeArea(analyzer, int(initialArea), int(finalArea))
     # recuerde castear los parametros a int
 
 

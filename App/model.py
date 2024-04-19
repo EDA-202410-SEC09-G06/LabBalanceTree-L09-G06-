@@ -61,9 +61,8 @@ def newAnalyzer():
     analyzer["dateIndex"] = om.newMap(omaptype="RBT",
                                       cmpfunction=compareDates)
     # TODO lab 9, crear el indice ordenado por areas reportadas
-    analyzer["areaIndex"] = om.newMap(omaptype= "BST", cmpfunction= compareAreas)
+    analyzer["areaIndex"] = om.newMap(omaptype= "RBT", cmpfunction= compareAreas)
     return analyzer
-
 
 # Funciones para agregar informacion al catalogo
 
@@ -87,19 +86,17 @@ def updateAreaIndex(map, crime):
     y si el area son ["", " ", None] se utiliza el valor por defecto 9999
     """
     area_reportada = crime["REPORTING_AREA"]
+    if area_reportada== " " or area_reportada== "" or area_reportada== None:
+        area_reportada=9999
     entry = om.get(map,area_reportada)
     
-    if entry == None:
+    if entry is None:
         area_entry = newAreaEntry(crime)
         om.put(map,area_reportada,area_entry)
 
     
     else:
         area_entry = me.getValue(entry)
-
-
-        if area_entry == " " or area_entry ==  "" or area_entry == None:
-            area_entry = 9999
 
     addAreaIndex(area_entry,crime)
     
@@ -357,6 +354,8 @@ def compareAreas(area1, area2):
     """
     Compara dos areas
     """
+    area1=int(area1)
+    area2=int(area2)
     if area1 == area2: 
         return 0
     elif area1 > area2:
